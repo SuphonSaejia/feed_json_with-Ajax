@@ -1,0 +1,43 @@
+body{
+    font-family: 'Mali', cursive;
+    background-color: rgb(33, 35, 36); 
+}
+nav{
+    display: grid;
+    grid-template-columns:33% 34% 33%; /*responsive design*/
+    background-color:rgb(49, 49, 49);
+    text-align: center;
+    margin: 0px;
+    padding: 10px;
+    font-size: 2em;
+    border-style: groove;
+}
+a{
+    color: rgb(255, 255, 255);;
+}
+main{ 
+    display: grid;
+    grid-template-columns: 50% 50% ; /*responsive design*/
+}
+div{
+    background-color: rgb(255, 255, 255);
+    margin: 10px 0px 10px 0px;
+}
+div1{
+    background-color: rgb(255, 255, 255);
+    margin: 10px 0px 10px 0px;
+    padding: 10px;
+}
+@media screen and (max-width:1000px) { /*responsive design*/
+    main{ 
+        display: grid;
+        grid-template-columns: 100%;
+    }
+    div1{
+        margin: 0px 0px 10px 0px;
+    }
+    div{
+        background-color: rgb(255, 255, 255);
+        margin: 10px 0px 0px 0px;
+    }
+}

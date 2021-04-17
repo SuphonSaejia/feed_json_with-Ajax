@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link  rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mali:wght@200&display=swap"> 
+    <link rel="stylesheet" href="css/style.css">
+    <title>โควิด-19-th with Ajax</title>
+</head>
+<body>
+    <header>
+        <nav>
+               <a href="index.html" >Home</a>
+               <a href="news.html" >News</a>
+               <a href="about.html" >About Us</a>
+        </nav>
+    </header>
+    <main>
+        <aside>
+            <img src="../Virus.png"style="width:100%; height:100%;">
+        </aside>
+        <article>
+            <section><h3 style="color:rgb(255, 255, 255);">รายงานสถานการณ์ โควิด-19</h3></section>
+            <section><h4 style="color:rgb(255, 255, 255);" id="UpdateDate">อัพเดทข้อมูลล่าสุด : </h4></section>
+            <section0 style="background-color:#F282A7;" >
+                <div><h5 style="color:rgb(0, 0, 0);">ติดเชื้อสะสม</h4></div>
+                <div ><h1 style="color:rgb(0, 0, 0);" id="Confirmed">10000</h1></div>
+                <div ><h5 style="color:rgb(0, 0, 0);" id="NewConfirmed">[+100]</h4></div>
+            </section0>
+            <section1>    
+                <section style="background-color:#587E5C;">
+                    <div><h5 style="color:rgb(0, 0, 0);">หายแล้ว</h4></div>
+                    <div><h1 style="color:rgb(0, 0, 0);" id="Recovered">1000</h1></div>
+                    <div><h5 style="color:rgb(0, 0, 0);" id="NewRecovered">[+50]</h4></div>
+                </section>
+                <section  style="background-color:#FAC240;" >
+                    <div><h5 style="color:rgb(0, 0, 0);">รักษาอยู่</h4></div>
+                    <div><h1 style="color:rgb(0, 0, 0);" id="Hospitalized">1000</h1></div>
+                    <div><h5 style="color:rgb(0, 0, 0);" id="NewHospitalized">[100]</h1></div>
+                </section>
+                <section style="background-color:#BD523F;">
+                    <div><h5 style="color:rgb(0, 0, 0);">เสียชีวิต</h4></div>
+                    <div><h1 style="color:rgb(0, 0, 0);" id="Deaths">100</h1></div>
+                    <div><h5 style="color:rgb(0, 0, 0);" id="NewDeaths">[+10]</h4></div>
+                </section>
+            </section1>
+        </article>
+    </main>
+    <script src="./script/index-ajax.js"></script>
+</body>
+</html>

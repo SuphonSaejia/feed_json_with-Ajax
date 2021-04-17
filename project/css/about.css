@@ -1,0 +1,93 @@
+/* ---------จัดโครงสร้างหลัก---การวางตำแหน่งและความสวยงามในภาพรวม------ */
+body{
+    font-family: 'Mali', cursive;
+    background-color: rgb(33, 35, 36); 
+}
+nav{
+    display: grid;
+    grid-template-columns:33% 34% 33%; /*responsive design*/
+    background-color:rgb(49, 49, 49);
+    text-align: center;
+    margin: 0px;
+    padding: 10px;
+    font-size: 2em;
+    border-style: groove;
+}
+article{
+    margin: 10px 10px 10px 0px;
+    padding: 5px;
+    background-color:rgb(49, 49, 49);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    border-style: dashed;
+    height: 580px;
+    display: grid;
+    grid-template-rows: 10%  90% ; /*responsive design*/
+}
+main{ 
+    display: grid;
+    grid-template-columns: 75% 25% ; /*responsive design*/
+}
+section{
+    display: grid;
+    grid-template-columns: 50% 50% 0%; /*responsive design*/
+}
+aside{
+    margin: 10px 0px 10px 0px;
+    padding: 15px;
+    font-size: 1em;
+    background-color:rgb(49, 49, 49);
+    color: rgb(255, 255, 255);
+    border-style: dotted;
+}
+footer{
+    background-color:rgb(49, 49, 49);
+    text-align: center;
+    color: rgb(255, 255, 255);
+    margin: 0px;
+    padding: 10px;
+    font-size: 1em;
+    border-style: groove;
+}
+/* ----------------------------------------------------------- */
+/* ------ตกแต่งเพิ่มเติม-------------------------------------- */
+a{
+    color: rgb(255, 255, 255);;
+}
+#napi{
+    color: #F282A7;
+}
+#api{
+    color: #6caae4
+}
+div{
+    text-align:left;
+    margin: 0xp 5px 0px 5px ;
+    padding: 5xp 5px 5px 5px;
+}
+img{
+    margin:0px auto 0px auto; /*responsive design*/
+    border-style: groove;
+}
+/* ----------------------------------------------------------- */
+/* -------ปรับโครงสร้างให้พอดีกับขนาดหน้าจอ------------------------- */
+@media screen and (max-width:1000px) { /*responsive design*/
+    main{ 
+        display: grid;
+        grid-template-columns: 100%;
+    }
+    article{
+        margin: 10px 0px 0px 0px;
+    }
+}
+@media screen and (max-width:800px) { /*responsive design*/
+   img{
+    display: none;
+   }
+   section{
+    display: grid;
+    grid-template-columns: 100%;
+    margin: 0px;
+    padding: 20px;
+}
+}

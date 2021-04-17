@@ -1,0 +1,72 @@
+/* -------อันนี้จะใช้ CSS ในการวางโครงสร้างและจัดการหน้า ส่วนความสวยงามได้กำหนดใส่ไปในตัวเลย-------- */
+body{
+    font-family: 'Mali', cursive;
+    background-color: rgb(33, 35, 36); 
+}
+nav{
+    display: grid;
+    grid-template-columns:33% 34% 33%; /*responsive design*/
+    background-color:rgb(49, 49, 49);
+    text-align: center;
+    margin: 0px;
+    padding: 10px;
+    font-size: 2em;
+    border-style: groove;
+}
+main{ 
+    display: grid;
+    grid-template-columns: 50% 50% ; /*responsive design*/
+    margin: 0px;
+    padding: 10px 5px  5px  5px ;
+    height: 670px;
+    border-style: groove;
+}
+aside{
+    margin: 0px;
+    padding: 35px;
+}
+a{
+    color: rgb(255, 255, 255);;
+}
+img{
+    margin-top: 50px;
+}
+article{
+    display: grid;
+    grid-template-rows:50px 80px 240px 100px;
+    margin: 0px;
+    padding: 15px;
+    font-size:1.5em;
+}
+section0{
+    display: grid;
+    grid-template-rows:33% 34% 33%; /*responsive design*/
+    margin: 5px;
+    padding: 5px;
+    border-radius: 20px;
+    text-align: center;
+}
+section1{
+    display: grid;
+    grid-template-columns:33% 34% 33%; /*responsive design*/
+    margin: 0px;
+    text-align: center;
+}
+section{
+    border-radius: 20px;
+    margin: 5px;
+    padding: 5px;
+}
+
+@media screen and (max-width:1000px) { /*responsive design*/
+    main{ 
+        display: grid;
+        grid-template-columns: 100%;
+
+    }
+    aside{
+        margin: 0px;
+        padding: 0px;
+        display: none;
+       }
+}
