@@ -1,2 +1,2 @@
 # feed_json_with-Ajax
-http://abrasive-dolls.surge.sh/index.html
+http://goofy-guide.surge.sh/news.html
