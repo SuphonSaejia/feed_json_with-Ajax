@@ -14,19 +14,19 @@ function ajaxCall (dataURL,outputElement, callback){
             }
         }
     };
-    XHR.open('GET',dataURL);
-    XHR.send(null);
+    XHR.open('GET',dataURL,true);
+    XHR.send();
 }
-    var news = document.querySelector(`#news`), jsonURL = 'http://newsapi.org/v2/top-headlines?country=th&apiKey=a70d4f9ca8894cf09976575575426bcb';
-
-    ajaxCall(jsonURL,news,function(data){
-        var addrBook =  data.articles, 
-        count = addrBook.length, 
+    var news = document.querySelector(`#news`), 
+    jsonURL = 'https://newsapi.org/v2/top-headlines?country=th&apiKey=a70d4f9ca8894cf09976575575426bcb';
+    ajaxCall(jsonURL,news,function(data){    
+        var addrBook =  data.articles,  //ดึงข้อมูลจาก API มาเป็บไว้ที่ตัวแปลนี้
+        count = addrBook.length,  //นับข้อมูลในตัวแปล addrBook ว่ามีเท่าไร
         i;
-            news.innerHTML = ``;
+            news.innerHTML = ``; //เคลียหน้าจอแสดงผลให้ว่าง
         for (i = 0; i < count; i++) {
-            var obj = addrBook[i];
-            if(obj.urlToImage){
+            var obj = addrBook[i]; //เข้าถึงข้อมูลโดยใช้ I เป็นตัวนับลำดับ
+            if(obj.urlToImage){ //แสดงผลแค่ข้อมูลที่มีรูปภาพ
             news.innerHTML += `<div>
                                <a href="${obj.url}"><img src="${obj.urlToImage}" style="width:100%; height:100%;" ></a>
                                </div>
