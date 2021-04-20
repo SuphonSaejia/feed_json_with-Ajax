@@ -18,7 +18,7 @@ function ajaxCall (dataURL,outputElement, callback){
     XHR.send();
 }
     var news = document.querySelector(`#news`), 
-    jsonURL = 'https://newsapi.org/v2/top-headlines?country=th&apiKey=a70d4f9ca8894cf09976575575426bcb';
+    jsonURL = 'http://cors-anywhere.herokuapp.com/https://newsapi.org/v2/top-headlines?country=th&apiKey=a70d4f9ca8894cf09976575575426bcb';
     ajaxCall(jsonURL,news,function(data){    
         var addrBook =  data.articles,  //ดึงข้อมูลจาก API มาเป็บไว้ที่ตัวแปลนี้
         count = addrBook.length,  //นับข้อมูลในตัวแปล addrBook ว่ามีเท่าไร
