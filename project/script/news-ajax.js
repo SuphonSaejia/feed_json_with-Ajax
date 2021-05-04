@@ -10,7 +10,7 @@ function ajaxCall (dataURL,outputElement, callback){
             if(typeof callback === 'function'){
                 callback(contacts);
             } else {
-                alert('There was aproblem of request : \n ${XHR.statusText}');
+                alert(`There was aproblem of request : \n ${XHR.statusText}`);
             }
         }
     };
@@ -19,7 +19,7 @@ function ajaxCall (dataURL,outputElement, callback){
 }
     var news = document.querySelector(`#news`), 
      //เข้าถึงAPIโดยผ่านproxyเพิ่อแก้ปัญหาการเข้าถึงAPIไม่ได้ proxy = http://cors-anywhere.herokuapp.com/
-    jsonURL = 'http://cors-anywhere.herokuapp.com/https://newsapi.org/v2/top-headlines?country=th&apiKey=a70d4f9ca8894cf09976575575426bcb';
+    jsonURL = `http://cors-anywhere.herokuapp.com/https://newsapi.org/v2/top-headlines?country=th&apiKey=a70d4f9ca8894cf09976575575426bcb`;
     ajaxCall(jsonURL,news,function(data){    
         var addrBook =  data.articles,  //ดึงข้อมูลจาก API มาเป็บไว้ที่ตัวแปลนี้
         count = addrBook.length,  //นับข้อมูลในตัวแปล addrBook ว่ามีเท่าไร
