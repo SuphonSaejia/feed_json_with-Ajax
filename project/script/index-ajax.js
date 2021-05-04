@@ -26,17 +26,17 @@ function ajaxCall (dataURL,outputElement, callback){
                NewHospitalized = document.querySelector(`#NewHospitalized`),
                Deaths = document.querySelector(`#Deaths`),
                NewDeaths = document.querySelector(`#NewDeaths`),
-               jsonURL = 'https://covid19.th-stat.com/api/open/today';
+               jsonURL = `https://covid19.th-stat.com/api/open/today`;
 
     ajaxCall(jsonURL,UpdateDate,function(data){
         UpdateDate.innerHTML = `<h4>อัพเดทข้อมูลล่าสุด : ${data.UpdateDate}</h4>`;
         Confirmed.textContent = data.Confirmed;
-        NewConfirmed.textContent = "[ +" + data.NewConfirmed + " ]";
+        NewConfirmed.textContent = `[ +` + data.NewConfirmed + ` ]`;
         Recovered.textContent = data.Recovered;
-        NewRecovered.textContent = "[ +" + data.NewRecovered + " ]";
+        NewRecovered.textContent = `[ +` + data.NewRecovered + ` ]";
         Hospitalized.textContent = data.Hospitalized;
-        NewHospitalized.textContent = "[ " + data.Hospitalized + " ]";
+        NewHospitalized.textContent = `[ ` + data.Hospitalized + ` ]`;
         Deaths.textContent = data.Deaths;
-        NewDeaths.textContent = "[ +" + data.NewDeaths + " ]";
+        NewDeaths.textContent = `[ +` + data.NewDeaths + ` ]`;
       });
 })();
